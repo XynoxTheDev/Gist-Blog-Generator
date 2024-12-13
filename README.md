@@ -24,12 +24,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository
    ```
-   git clone https://github.com/yourusername/blog-markdown-generator.git
+   git clone https://github.com/xynoxthedev/gist-blog-generator.git
    ```
 
 2. Navigate to the project directory
    ```
-   cd blog-markdown-generator
+   cd gist-blog-generator
    ```
 
 3. Install dependencies
@@ -81,5 +81,3 @@ This project is licensed under the Apache License - see the [LICENSE.md](https:/
 ## Contact
 
 Arindam Hazra | XynoxTheDev - [@XynoxTheDev](https://github.com/XynoxTheDev/) - [connect@xynoxthedev.xyz](mailto:connect@xynoxthedev.xyz)
-
-Project Link: [XynoxTheDev/Gist-Blog-Generator](https://github.com/XynoxTheDev/Gist-Blog-Generator)
