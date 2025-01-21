@@ -1,83 +1,36 @@
-# Gist Blog Generator
-
-Gist Blog Generator is a web application that simplifies the process of creating professionally formatted blog posts in Markdown, ready to be posted on GitHub Gists or other platforms that support Markdown.
-
-## Features
-
-- User-friendly interface for inputting blog post content
-- Dynamic section addition for flexible blog structure
-- Real-time Markdown preview
-- Automatic generation of table of contents
-- Support for author bio and social media links
-- Responsive design for use on various devices
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+First, run the development server:
 
-### Prerequisites
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- Node.js (v14.0.0 or later)
-- npm (v6.0.0 or later)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Installation
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-1. Clone the repository
-   ```
-   git clone https://github.com/xynoxthedev/gist-blog-generator.git
-   ```
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-2. Navigate to the project directory
-   ```
-   cd gist-blog-generator
-   ```
+## Learn More
 
-3. Install dependencies
-   ```
-   npm install
-   ```
+To learn more about Next.js, take a look at the following resources:
 
-4. Start the development server
-   ```
-   npm run dev
-   ```
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-5. Open your browser and visit `http://localhost:3000`
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Usage
+## Deploy on Vercel
 
-1. Fill in the blog post details in the provided form fields.
-2. Add or remove sections as needed using the "Add Section" button.
-3. Click "Generate Markdown" to create your formatted Markdown.
-4. View the generated Markdown in the "Preview" tab.
-5. Copy the generated Markdown and paste it into your GitHub Gist or preferred platform.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## Built With
-
-- [Next.js](https://nextjs.org/) - The React framework used
-- [React](https://reactjs.org/) - JavaScript library for building user interfaces
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
-- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built with Radix UI and Tailwind CSS
-
-## Contributing
-
-We welcome contributions to the Blog Markdown Generator! Please follow these steps to contribute:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the Apache License - see the [LICENSE.md](https://github.com/XynoxTheDev/Gist-Blog-Generator/blob/main/LICENSE) file for details.
-
-## Acknowledgments
-
-- Thanks to the Next.js team for the amazing framework
-- Inspiration from various Markdown editors and blog platforms
-
-## Contact
-
-Arindam Hazra | XynoxTheDev - [@XynoxTheDev](https://github.com/XynoxTheDev/) - [connect@xynoxthedev.xyz](mailto:connect@xynoxthedev.xyz)
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
