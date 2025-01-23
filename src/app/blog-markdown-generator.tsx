@@ -9,8 +9,9 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Copy, Check } from 'lucide-react'
 import { useToast } from "../hooks/use-toast"
+import dynamic from 'next/dynamic'
 
-export default function BlogMarkdownGenerator() {
+function BlogMarkdownGeneratorComponent() {
     const [mounted, setMounted] = useState(false)
     const [blogData, setBlogData] = useState({
         title: '',
@@ -231,3 +232,7 @@ export default function BlogMarkdownGenerator() {
         </Card>
     )
 }
+
+export const BlogMarkdownGenerator = dynamic(() => Promise.resolve(BlogMarkdownGeneratorComponent), {
+    ssr: false
+})

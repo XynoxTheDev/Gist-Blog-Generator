@@ -1,4 +1,4 @@
-import BlogMarkdownGenerator from './blog-markdown-generator'
+import {BlogMarkdownGenerator} from './blog-markdown-generator'
 
 export default function Home() {
   return (
