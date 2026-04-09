@@ -1,70 +1,163 @@
 # Gist Blog Generator
-Gist Blog Generator is a web application that simplifies the process of creating professionally formatted blog posts in Markdown, ready to be posted on GitHub Gists or other platforms that support Markdown.
+
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
+
+> A web application that turns your blog content into professionally formatted Markdown — ready to publish on GitHub Gists or any Markdown-supported platform.
+
+<!-- Add a screenshot or GIF here -->
+<!-- ![App Screenshot](public/screenshot.png) -->
+
+---
+
+## Overview
+
+Gist Blog Generator provides a structured form-based interface for composing blog posts. Fill in your title, introduction, body sections, conclusion, and author details — then generate clean, publication-ready Markdown in one click. The output includes a table of contents, author bio, social links, and a call-to-action footer, all formatted consistently.
+
+It's designed for developers and writers who publish technical content on GitHub Gists and want to skip the manual Markdown formatting.
+
+---
+
 ## Features
-- User-friendly interface for inputting blog post content
-- Dynamic section addition for flexible blog structure
-- Real-time Markdown preview
-- Automatic generation of table of contents
-- Support for author bio and social media links
-- Responsive design for use on various devices
+
+- **Structured input form** — Dedicated fields for title, author, cover image URL, introduction, body sections, conclusion, and author bio
+- **Dynamic sections** — Add as many content sections as needed; each gets its own title and body
+- **Auto-generated table of contents** — Built automatically from your section titles, with anchor links
+- **Real-time Markdown preview** — Switch between the Input and Preview tabs to see your output as you write
+- **One-click copy** — Copy the generated Markdown to clipboard directly from the preview
+- **Social links in output** — Twitter, LinkedIn, and GitHub links are woven into the author footer
+- **Responsive design** — Works across desktop and mobile viewports
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| [Next.js 15](https://nextjs.org/) | React framework, static export |
+| [React 18](https://reactjs.org/) | UI component model |
+| [TypeScript 5](https://www.typescriptlang.org/) | Type safety |
+| [Tailwind CSS 3](https://tailwindcss.com/) | Utility-first styling |
+| [shadcn/ui](https://ui.shadcn.com/) | Pre-built accessible components |
+| [Radix UI](https://www.radix-ui.com/) | Headless UI primitives (Tabs, Toast, Label) |
+| [Lucide React](https://lucide.dev/) | Icon library |
+| [pnpm](https://pnpm.io/) | Package manager |
+
+---
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 ### Prerequisites
-- Node.js (v14.0.0 or later)
-- npm (v6.0.0 or later)
+
+- [Node.js](https://nodejs.org/) v18.0.0 or later
+- [pnpm](https://pnpm.io/) v8.0.0 or later (`npm install -g pnpm`)
+
 ### Installation
-1. Clone the repository
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/XynoxTheDev/Gist-Blog-Generator.git
+   cd Gist-Blog-Generator
    ```
-   git clone https://github.com/xynoxthedev/gist-blog-generator.git
+
+2. Install dependencies:
+   ```bash
+   pnpm install
    ```
-2. Navigate to the project directory
+
+3. Start the development server:
+   ```bash
+   pnpm dev
    ```
-   cd gist-blog-generator
-   ```
-3. Install dependencies
-   ```
-   npm install
-   ```
-4. Start the development server
-   ```
-   npm run dev
-   ```
-5. Open your browser and visit `http://localhost:3000`
+
+4. Open your browser and visit `http://localhost:3000`
+
+### Available Scripts
+
+| Command | Description |
+|---|---|
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production (static export) |
+| `pnpm start` | Start production server |
+| `pnpm lint` | Run ESLint |
+| `pnpm deploy` | Build and deploy to GitHub Pages |
+
+---
+
 ## Usage
-1. Fill in the blog post details in the provided form fields.
-2. Add or remove sections as needed using the "Add Section" button.
-3. Click "Generate Markdown" to create your formatted Markdown.
-4. View the generated Markdown in the "Preview" tab.
-5. Copy the generated Markdown and paste it into your GitHub Gist or preferred platform.
 
-## Built With
+1. **Fill in the blog details** — Enter your blog title, author name, and an optional cover image URL.
+2. **Write your content** — Add an introduction, then fill in the body sections. Each section has a title and content field.
+3. **Add more sections** — Click **Add Section** to insert additional content blocks as needed.
+4. **Write your conclusion** — Fill in the conclusion field and your author bio.
+5. **Add social links** — Enter your Twitter handle, LinkedIn URL, and GitHub username — these appear in the generated footer.
+6. **Generate Markdown** — Click the **Generate Markdown** button in the footer.
+7. **Preview the output** — Switch to the **Preview** tab to see the formatted Markdown.
+8. **Copy and publish** — Click the copy button, then paste into a new [GitHub Gist](https://gist.github.com/) or any Markdown editor.
 
-- [Next.js](https://nextjs.org/) - The React framework used
-- [React](https://reactjs.org/) - JavaScript library for building user interfaces
-- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
-- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built with Radix UI and Tailwind CSS
+---
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── blog-markdown-generator.tsx  # Main generator component (form + preview + logic)
+│   ├── globals.css                  # Global styles
+│   ├── layout.tsx                   # Root layout
+│   └── page.tsx                     # Entry page
+├── components/
+│   └── ui/                          # shadcn/ui components
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── input.tsx
+│       ├── label.tsx
+│       ├── tabs.tsx
+│       ├── textarea.tsx
+│       ├── toast.tsx
+│       └── toaster.tsx
+├── hooks/
+│   └── use-toast.ts                 # Toast notification hook
+└── lib/
+    └── utils.ts                     # Utility functions (cn helper)
+```
+
+---
 
 ## Contributing
 
-We welcome contributions to the Blog Markdown Generator! Please follow these steps to contribute:
+Contributions are welcome! To contribute:
 
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m 'Add your feature'
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
 5. Open a Pull Request
+
+Please ensure your code passes linting (`pnpm lint`) before submitting.
+
+---
 
 ## License
 
-This project is licensed under the Apache License - see the [LICENSE.md](https://github.com/XynoxTheDev/Gist-Blog-Generator/blob/main/LICENSE) file for details.
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-
-- Thanks to the Next.js team for the amazing framework
-- Inspiration from various Markdown editors and blog platforms
+---
 
 ## Contact
 
-Arindam Hazra | XynoxTheDev - [@XynoxTheDev](https://github.com/XynoxTheDev/) - [connect@xynoxthedev.xyz](mailto:connect@xynoxthedev.xyz)
+**Arindam Hazra** (XynoxTheDev)
+
+- GitHub: [@XynoxTheDev](https://github.com/XynoxTheDev/)
+- Email: [connect@xynoxthedev.xyz](mailto:connect@xynoxthedev.xyz)
